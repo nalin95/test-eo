@@ -1,6 +1,6 @@
 project: pearsontechnology
 environments:
-  - name: sample-eo-environment
+  - name: sample-app-environment
     namespace: eo-tst
     deployment:
       method: rolling-upgrade
