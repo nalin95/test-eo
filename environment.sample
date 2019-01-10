@@ -5,21 +5,3 @@ environments:
     deployment:
       method: rolling-upgrade
     services:
-      - type: postgres
-        name: eo-tst-kong
-        version : 1.0
-        options:
-          version: 9.6.6
-          replicas: 1
-          multiaz: false
-          dbinstanceclass: db.m4.large
-          allocatedstorage: 200
-      - type: postgres
-        name: eo-tst-kong2
-        version : 1.0
-        options:
-          version: 9.6.6
-          replicas: 1
-          multiaz: false
-          dbinstanceclass: db.m4.large
-          allocatedstorage: 200
