@@ -14,3 +14,17 @@ environments:
           multiaz: false
           dbinstanceclass: db.m4.large
           allocatedstorage: 200
+      - name: cms
+        ssl: false
+        port: 9110
+        application: cms
+        annotations:
+          - name: prometheus.io/scrape
+            value: true
+          - name: prometheus.io/path
+            value: /cms/metrics
+          - name: prometheus.io/port
+            value: 9110
+        limits:
+          memory: 2048Mi
+        replicas: 1
