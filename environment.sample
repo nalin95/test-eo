@@ -82,8 +82,8 @@ environments:
         external_url: glp2-kong-int.glp.pearsondev.tech
         port: 8080
         replicas: 1
-        ssl: yes
-        httpsOnly: yes
+        ssl: true
+        httpsOnly: true
         env:
           - secret: PASSWD
             value: kong-admin-password
