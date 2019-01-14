@@ -28,4 +28,4 @@ environments:
             value: 9110
         limits:
           memory: 2048Mi
-        replicas: 1
+        replicas: 5
