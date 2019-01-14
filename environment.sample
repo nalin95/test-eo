@@ -17,6 +17,7 @@ environments:
       - name: cms
         ssl: false
         port: 9110
+        version: 1
         application: cms
         annotations:
           - name: prometheus.io/scrape
