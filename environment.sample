@@ -10,7 +10,7 @@ environments:
         version : 1.0
         options:
           version: 9.6.6
-          replicas: 3
+          replicas: 2
           multiaz: false
           dbinstanceclass: db.m4.large
           allocatedstorage: 200
