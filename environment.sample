@@ -22,19 +22,6 @@ environments:
           resources_limits_memory: 2Gi
           resources_requests_cpu: 500m
           resources_requests_memory: 1Gi
-      - name: kong-admin
-        application: kong-admin
-        version: 0.10.2
-        external_url: glp2-kong-int.glp.pearsondev.tech
-        port: 8080
-        replicas: 1
-        ssl: true
-        httpsOnly: true
-        env:
-          - secret: PASSWD
-            value: kong-admin-password
-          - name: UNAME
-            value: admin
       - name: cms
         ssl: false
         port: 9110
