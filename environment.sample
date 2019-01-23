@@ -14,53 +14,18 @@ environments:
           resources_limits_memory: 8Gi
           resources_requests_cpu: "2"
           resources_requests_memory: 8Gi
-      - type: Zookeeper
-        name: zkex
+      - type: Cb
+        name: cluster1
+        version: 1.0.0
         options:
-          replicas: 3
-          resources_limits_cpu: "1"
-          resources_limits_memory: 2Gi
-          resources_requests_cpu: 500m
-          resources_requests_memory: 1Gi
-      - name: cms
-        ssl: false
-        port: 9110
-        application: cms
-        annotations:
-          - name: prometheus.io/scrape
-            value: true
-          - name: prometheus.io/path
-            value: /cms/metrics
-          - name: prometheus.io/port
-            value: 9110
-        limits:
-          memory: 2048Mi
-        replicas: 1
-      - name: lad
-        ssl: false
-        port: 9360
-        application: lad
-        annotations:
-          - name: prometheus.io/scrape
-            value: true
-          - name: prometheus.io/path
-            value: /lad/metrics
-          - name: prometheus.io/port
-            value: 9360
-        limits:
-          memory: 2048Mi
-        replicas: 1
-      - name: iam
-        ssl: false
-        port: 9100
-        application: iam
-        annotations:
-          - name: prometheus.io/scrape
-            value: true
-          - name: prometheus.io/path
-            value: /iam/metrics
-          - name: prometheus.io/port
-            value: 9100
-        limits:
-          memory: 2048Mi
-        replicas: 1
+          use_mds: 1
+          high_perf: 1
+          instance_type: "r4.2xlarge"
+          node_count: "2"
+          data_size: 512
+          query_instance_type: "c4.large"
+          query_node_count: "1"
+          query_data_size: 200
+          index_instance_type: "r4.xlarge"
+          index_node_count: "1"
+          index_data_size: 512
