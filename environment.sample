@@ -15,6 +15,20 @@ environments:
           resources_limits_memory: 8Gi
           resources_requests_cpu: "2"
           resources_requests_memory: 8Gi
+      - type: Neptune
+        name: nep01
+        version: 1.0.0
+        options: 
+          ApplyImmediately: True
+          db_instances:
+            - db_name: "db01"
+              db_instance_class: "db.r4.2xlarge"
+            - db_name: "db02"
+              db_instance_class: "db.r4.xlarge"
+            - db_name: "db03"
+              db_instance_class: "db.r4.large"
+            - db_name: "db04"
+              db_instance_class: "db.r4.large"
       - name: eviews
         ssl: false
         port: 9330
