@@ -23,12 +23,6 @@ environments:
           db_instances:
             - db_name: "db01"
               db_instance_class: "db.r4.2xlarge"
-            - db_name: "db02"
-              db_instance_class: "db.r4.xlarge"
-            - db_name: "db03"
-              db_instance_class: "db.r4.large"
-            - db_name: "db04"
-              db_instance_class: "db.r4.large"
       - name: eviews
         ssl: false
         port: 9330
